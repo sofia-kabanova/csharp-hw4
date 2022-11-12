@@ -45,8 +45,6 @@ else
             }
             Console.Write("]");
         }
-
-        // 
         Console.WriteLine($"Массив из {size} чисел: ");
         int[] arr = FillArray(size, minNumber, maxNumber);
         PrintNumbers(arr);

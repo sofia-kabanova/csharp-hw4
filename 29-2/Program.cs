@@ -19,7 +19,7 @@ else
     if (maxNumber < minNumber) Console.WriteLine("Ошибка!");
     else
     {
-        int[] arr = new int[length]; 
+        int[] arr = new int[length];
         void FillArray(int[] array, int min, int max)
         {
             Random rnd = new Random();
