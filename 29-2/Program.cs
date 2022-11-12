@@ -19,11 +19,8 @@ else
     if (maxNumber < minNumber) Console.WriteLine("Ошибка!");
     else
     {
-        int[] arr = new int[length]; //создали массив из length элементов
-                                     // int по умолчанию инициализируется нулем, поэтому данный массив
-                                     // состоит из восьми нулей: [0,0,0,0,0,0,0,0]
-
-        void FillArray(int[] array, int min, int max)// делаем метод, который заполняет массив
+        int[] arr = new int[length]; 
+        void FillArray(int[] array, int min, int max)
         {
             Random rnd = new Random();
             for (int i = 0; i < length; i++)
