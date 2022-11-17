@@ -1,34 +1,28 @@
-﻿// Напишите программу, которая 
-// принимает на вход число - пользовательский ввод
-// выдает количество цифр в числе
-// Например:
-// 456->3
-// 78->2
-// 89126->5
-Console.Clear();
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number == 0) Console.Write($"Количество цифр в числе {number} -> 1");
+﻿//Задача 25: Напишите цикл, 
+//который принимает на вход два числа (A и B)
+// и возводит число A в натуральную степень B.
+//  Например
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+Console.WriteLine("Введите число A: ");
+int numa = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число В (натуральное): ");
+int numb = Convert.ToInt32(Console.ReadLine());
+if (numb <= 0)
+{
+    Console.WriteLine("Число В не является натуральным ");
+}
 else
 {
-    int Count(int num)
+    int Exponentiation(int a, int b)
     {
-        int i = default;
-        for (i = 0; num > 0; i++)
+        int a1 = a;
+        for (int i = 2; i <= b; i++)
         {
-            num /= 10;
+            a1 = a1 * a;
         }
-        return i;
+        return a1;
     }
-    if (number < 0)
-    {
-        int number1 = -number;
-        int result = Count(number1);
-        Console.Write($"Количество цифр в числе {number} -> {result}");
-    }
-    else
-    {
-        int result = Count(number);
-        Console.Write($"Количество цифр в числе {number} -> {result}");
-    }
+    int expAb = Exponentiation(numa, numb);
+    Console.WriteLine($"{numa} в степени {numb} = {expAb}");
 }
