@@ -8,21 +8,21 @@ Console.WriteLine("Введите число A: ");
 int numa = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число В (натуральное): ");
 int numb = Convert.ToInt32(Console.ReadLine());
+int Exponentiation(int a, int b)
+{
+    int a1 = a;
+    for (int i = 2; i <= b; i++)
+    {
+        a1 = a1 * a;
+    }
+    return a1;
+}
 if (numb <= 0)
 {
     Console.WriteLine("Число В не является натуральным ");
 }
 else
 {
-    int Exponentiation(int a, int b)
-    {
-        int a1 = a;
-        for (int i = 2; i <= b; i++)
-        {
-            a1 = a1 * a;
-        }
-        return a1;
-    }
     int expAb = Exponentiation(numa, numb);
     Console.WriteLine($"{numa} в степени {numb} = {expAb}");
 }
