@@ -8,13 +8,11 @@
 Console.Clear();
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
-int number1 = default;
-if (number < 0) number1 = -number;
-else number1 = number;
+int number1=Math.Abs(number);
 int SumNumbers(int num)
 {
     int sum = default;
-    for (int i = 0; num > 0; i++)
+    while (num>0)
     {
         sum += num % 10;
         num /= 10;
