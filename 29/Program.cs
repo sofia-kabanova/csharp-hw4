@@ -8,7 +8,6 @@ Console.WriteLine("Введите  длинну массива:");
 //  если запрашиваем длинну массива у пользователя
 int length = Convert.ToInt32(Console.ReadLine());
 // int length = 8; // вводим длинну массива = 8 элементов
-if (length <= 0) Console.WriteLine("Ошибка!");
 int[] arr = new int[length];
 void FillArray(int[] array, int min, int max)
 {
@@ -30,7 +29,8 @@ Console.Write("Min: ");
 int minNumber = Convert.ToInt32(Console.ReadLine());
 Console.Write("Max: ");
 int maxNumber = Convert.ToInt32(Console.ReadLine());
-if (maxNumber > minNumber)
+if (maxNumber < minNumber) Console.WriteLine($"Ошибка!");
+else
 {
     Console.WriteLine($"Массив из {length} чисел: ");
     FillArray(arr, minNumber, maxNumber);
