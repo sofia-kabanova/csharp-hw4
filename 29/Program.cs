@@ -8,13 +8,20 @@ Console.WriteLine("Введите  длинну массива:");
 //  если запрашиваем длинну массива у пользователя
 int length = Convert.ToInt32(Console.ReadLine());
 // int length = 8; // вводим длинну массива = 8 элементов
+if (length <= 0)
+{
+    Console.WriteLine(value: "Вы ввели неверное значение, перезапустите программу.");
+    return;
+}
 int[] arr = new int[length];
 void FillArray(int[] array, int min, int max)
 {
     Random rnd = new Random();
     for (int i = 0; i < length; i++)
     {
-        arr[i] = rnd.Next(min, max);
+        arr[i] = rnd.Next(min, max); // можно не запрашивать мин и мах
+        // arr[i] = rnd.Next(100) - массив заполнится числами от 0 до 100
+        // или arr[i] = rnd.Next(10,100) числами от 10 до 100. 
     }
 }
 void PrintArray(int[] array)
